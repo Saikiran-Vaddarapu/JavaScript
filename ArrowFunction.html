@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <title> Arrow Functions </title>
+    <style>
+        .center
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1> Arrow Function Demonstration </h1>
+        <!-- button type="button" onclick="assign();"> Click me to enter Name </button -->
+        <p id = "g"> Your Result will appear here  </p>
+    </div>    
+    <script>
+        var firstName,lastName;
+        firstName="Hello";
+        lastName="World";
+        let k = (firstName,lastName) =>  firstName.charAt(0) + lastName.charAt(0);
+        document.getElementById("g").innerHTML += " " + k(firstName,lastName);
+    </script>
+</body>
+</html>
