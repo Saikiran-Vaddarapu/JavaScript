@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <title> FunctionAsParam </title>
+    <style>
+        .center
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1> Function passed as a parameter Demonstration </h1>
+        <!-- button type="button" onclick="assign();"> Click me to enter Name </button -->
+        <p id = "g"> Your Result will appear here  </p>
+    </div>    
+    <script>
+        function display(){
+           return 5;
+        }
+        let funsetasParam = function(value,  m = display()){
+            return value * m;
+        }
+        document.getElementById("g").innerHTML += " " + funsetasParam(100);
+    </script>
+</body>
+</html>
