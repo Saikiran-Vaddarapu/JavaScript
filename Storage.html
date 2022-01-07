@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <title> Storage Demonstration </title>
+    <style>
+        .center
+        {
+            text-align: center;
+        }
+        .center p{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1> Storage Demonstration </h1> <br>
+        <button type="button" onclick="incrementCount();"> Click me to increment the count </button>
+        <p> Session Count : </p>
+        <p id = "session"> _____  </p><br>
+        <p> local Count </p>
+        <p id = "local"> ______ </p>
+        <br>
+        <button type="button" onclick="erase();"> Click me to clear the data </button>
+    </div>    
+    <script>
+        function incrementCount()
+        {
+            if(sessionStorage.count)
+            sessionStorage.count = Number(sessionStorage.count) + 1;
+            else
+            sessionStorage.count = 1;
+            if(localStorage.count)
+            localStorage.count = Number(localStorage.count) + 1;
+            else
+            localStorage.count = 1;
+        }
+        function erase(){
+            sessionStorage.clear();
+            localStorage.clear();
+        }
+        document.getElementById("session").innerHTML = sessionStorage.count;
+        document.getElementById("local").innerHTML = localStorage.count;
+    </script>
+</body>
+</html>
